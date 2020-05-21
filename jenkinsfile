@@ -11,7 +11,7 @@ pipeline {
          				   }
          			}
                      steps {
-                        sh "/usr/local/zk/bin/zk-pipeline start"
+                        sh "/usr/local/zk/bin/run.sh"
                            }
                  }
     }
