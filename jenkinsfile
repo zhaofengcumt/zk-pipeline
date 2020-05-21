@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+         stage ('CheckEnv') {
+               agent {
+         			 docker {
+         				image 'alpine'
+         				args '--privileged -t -v /usr/local/zk/bin:/usr/local/zk/bin'
+         				reuseNode true
+         				   }
+         			}
+                     steps {
+                        sh "/usr/local/zk/bin/zk-pipeline start"
+                           }
+                 }
+    }
+}
