@@ -6,7 +6,7 @@ pipeline {
                agent {
          			 docker {
          				image 'alpine'
-         				args '--privileged -t -v /usr/local/zk/bin:/usr/local/zk/bin'
+         				args '--privileged -t -v /usr/local/zk:/usr/local/zk'
          				reuseNode true
          				   }
          			}
